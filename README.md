@@ -191,15 +191,25 @@ Medical chatbots assist users by answering health-related questions instantly us
 ## 🏗 Project Structure
 
 mediscan-ai/
+
 ├── app.py # Flask entry point
+
 ├── config.py # Config settings
+
 ├── auth.py # Auth logic
+
 ├── models/ # Trained .h5 models
+
 ├── views/ # Blueprints for each module
+
 ├── templates/ # Jinja2 HTML files
+
 ├── static/ # CSS, JS, Images
+
 ├── utils/ # Helper utilities
+
 ├── requirements.txt # Dependencies
+
 └── README.md
 
 
