@@ -2,6 +2,9 @@
 
 MediScan-AI is an integrated AI system designed to assist medical professionals and patients with fast, accurate diagnostic tools powered by deep learning. This web-based platform includes medical image classification, drug identification, patient feedback analysis, and an AI-driven chatbot — all accessible through a user-friendly interface.
 
+![image](https://github.com/user-attachments/assets/7ab71fd3-e0a3-44a8-b821-a3577ba6253e)
+
+
 ---
 
 ## 📌 Table of Contents
@@ -186,4 +189,24 @@ Medical chatbots assist users by answering health-related questions instantly us
 ---
 
 ## 🏗 Project Structure
+
+mediscan-ai/
+├── app.py # Flask entry point
+├── config.py # Config settings
+├── auth.py # Auth logic
+├── models/ # Trained .h5 models
+├── views/ # Blueprints for each module
+├── templates/ # Jinja2 HTML files
+├── static/ # CSS, JS, Images
+├── utils/ # Helper utilities
+├── requirements.txt # Dependencies
+└── README.md
+
+
+
+
+## 🎬 Demo Video
+
+
+
 
