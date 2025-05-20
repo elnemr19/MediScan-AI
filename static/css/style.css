@@ -1,0 +1,146 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.jumbotron {
+    background: linear-gradient(135deg, #007bff 0%, #00b4ff 100%);
+    color: white;
+}
+
+.alert {
+    border-radius: 0.5rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+/* Chatbot specific styles */
+.chat-container {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.user-message {
+    background-color: #007bff;
+    color: white;
+    border-radius: 1rem 1rem 0 1rem;
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 0;
+    max-width: 80%;
+    float: right;
+    clear: both;
+}
+
+.bot-message {
+    background-color: #f1f1f1;
+    color: #333;
+    border-radius: 1rem 1rem 1rem 0;
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 0;
+    max-width: 80%;
+    float: left;
+    clear: both;
+}
+
+#image-preview img {
+    max-width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+#image-preview .text-muted {
+    font-size: 0.9rem;
+}
+
+/* Brain Tumor Specific Styles */
+#brain-preview .card {
+    transition: all 0.3s ease;
+    max-width: 300px;
+}
+
+#brain-preview .card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+}
+
+.badge.bg-menin {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.badge.bg-glioma {
+    background-color: #dc3545;
+    color: white;
+}
+
+.badge.bg-tumor {
+    background-color: #0dcaf0;
+    color: #212529;
+}
+
+/* Sentiment Analysis Specific Styles */
+#char-counter {
+    min-width: 100px;
+    font-weight: 500;
+}
+
+.result-section {
+    transition: all 0.3s ease;
+}
+
+.progress-bar {
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+textarea:invalid {
+    border-color: #dc3545;
+}
+
+.sentiment-badge {
+    font-size: 1rem;
+    padding: 0.5em 1em;
+}
+
+/* Chatbot specific styles */
+#chat-container {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+/* Message animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#chat-container div {
+    animation: fadeIn 0.3s ease-out;
+    margin-bottom: 10px;
+}

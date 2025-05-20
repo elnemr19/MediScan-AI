@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Medical Chatbot{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">Medical AI Chatbot</h2>
+    
+    <div class="card shadow">
+        <div class="card-body">
+            <div id="chat-container" class="mb-3" style="height: 400px; overflow-y: auto;">
+                <!-- Messages will appear here -->
+            </div>
+            
+            <form id="chat-form">
+                <div class="input-group">
+                    <input type="text" id="user-input" class="form-control" 
+                           placeholder="Ask me anything medical-related..." required>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}Sentiment Analysis{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">Patient Feedback Analysis</h2>
+    
+    <div class="card shadow">
+        <div class="card-body">
+            <form method="POST" id="sentiment-form">
+                <div class="mb-3">
+                    <label class="form-label">Enter Patient Feedback</label>
+                    <textarea class="form-control" name="text" id="feedback-text" 
+                              rows="5" placeholder="Enter patient feedback or review here..."
+                              required minlength="10" maxlength="1000"></textarea>
+                    <div class="d-flex justify-content-between mt-2">
+                        <div class="form-text">
+                            Minimum 10 characters, maximum 1000 characters
+                        </div>
+                        <div id="char-counter" class="text-muted">0/1000</div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-chart-bar me-2"></i>Analyze Sentiment
+                </button>
+            </form>
+            
+            {% if result %}
+            <div class="mt-4 result-section">
+                <h4>Analysis Result:</h4>
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="me-3">
+                                <span class="badge rounded-pill bg-{{ sentiment_labels[result.sentiment] }} p-2">
+                                    {{ result.sentiment }}
+                                </span>
+                            </div>
+                            <div class="w-100">
+                                <div class="progress" style="height: 20px;">
+                                    <div class="progress-bar bg-{{ sentiment_labels[result.sentiment] }}" 
+                                         role="progressbar" 
+                                         style="width: {{ result.confidence * 100 }}%"
+                                         aria-valuenow="{{ result.confidence * 100 }}" 
+                                         aria-valuemin="0" 
+                                         aria-valuemax="100">
+                                        {{ (result.confidence * 100)|round(1) }}%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-3">
+                            <h5>Original Text:</h5>
+                            <div class="p-3 bg-light rounded">
+                                {{ text }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/sentiment.js') }}"></script>
+{% endblock %}

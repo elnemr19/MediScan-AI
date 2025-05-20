@@ -1,0 +1,3 @@
+FLASK_APP=app.py
+FLASK_ENV=development
+SECRET_KEY=082b3a3551d3ca87

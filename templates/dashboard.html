@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="jumbotron bg-light p-5 rounded-3 mb-4">
+            <h1 class="display-4">Welcome to MediScan AI System</h1>
+            <p class="lead">A comprehensive AI-powered medical diagnostic tool</p>
+            <hr class="my-4">
+            <p>Select a service from the navigation menu to get started.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-lungs me-2"></i>Pneumonia Detection</h5>
+                <p class="card-text">Upload a chest X-ray image to detect signs of pneumonia using our advanced AI model.</p>
+                <a href="{{ url_for('pneumonia.pneumonia') }}" class="btn btn-primary">Go to Pneumonia Detection</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-brain me-2"></i>Brain Tumor Detection</h5>
+                <p class="card-text">Upload a brain scan image to detect different types of brain tumors.</p>
+                <a href="{{ url_for('brain.brain') }}" class="btn btn-primary">Go to Brain Tumor Detection</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-comment-dots me-2"></i>Sentiment Analysis</h5>
+                <p class="card-text">Analyze patient feedback and reviews to determine positive or negative sentiment.</p>
+                <a href="{{ url_for('sentiment.sentiment') }}" class="btn btn-primary">Go to Sentiment Analysis</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-robot me-2"></i>Medical Chatbot</h5>
+                <p class="card-text">Ask our AI medical assistant any health-related questions and get instant answers.</p>
+                <a href="{{ url_for('chatbot.chatbot') }}" class="btn btn-primary">Go to Medical Chatbot</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-pills me-2"></i>Drug Classification</h5>
+                <p class="card-text">Upload an image of a pharmaceutical drug to classify its type.</p>
+                <a href="{{ url_for('drugs.drugs') }}" class="btn btn-primary">Go to Drug Classification</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
