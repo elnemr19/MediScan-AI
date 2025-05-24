@@ -220,3 +220,7 @@ mediscan-ai/
 
 
 
+
+https://github.com/user-attachments/assets/22f4ce49-0dc6-444c-89f7-29ff3f93064c
+
+
